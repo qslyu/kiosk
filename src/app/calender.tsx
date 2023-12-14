@@ -34,7 +34,7 @@ export default function Calender() {
                 {spacerHeight && <div key={`s-${i}`} className={`w-1/2 ${spacerHeight}`} />}
                 <div key={i} className={`p-0.5 w-1/2 ${height}`}>
                   <div className="flex items-center bg-slate-500 rounded-xl h-full px-2">
-                    <p className="text-white text-sm font-bold">{event.summary} {event.location}</p>
+                    <p className="text-white font-bold">{event.summary} {event.location}</p>
                   </div>
                 </div>
               </>

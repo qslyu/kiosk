@@ -14,7 +14,7 @@ export default function Clock() {
   return (
     <Card className="bg-white">
       <div className="p-4">
-        <div className="text-6xl font-bold">{currentTime.toLocaleDateString().substring(5)} {currentTime.toLocaleTimeString().substring(0,5)}</div>
+        <div className="text-6xl font-bold">{currentTime.toLocaleDateString().substring(5)} {currentTime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</div>
       </div>
     </Card>
   )

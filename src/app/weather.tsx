@@ -9,7 +9,7 @@ export default function Weather() {
   return (
     <Card className="bg-blue-200">
       <div className="flex p-4">
-        {data?.list.map((item: any) => 
+        {data && data.list.map((item: any) => 
             <div key={item.dt} className="flex flex-col items-center">
               <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} />
               <p className="text-xl font-bold">{Math.floor(item.main.temp)}°C</p>
@@ -17,6 +17,7 @@ export default function Weather() {
             </div>
           )
         }
+        {isLoading && <p className="text-xl font-bold">Loading...</p>}
       </div>
     </Card>
   )
