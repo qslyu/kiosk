@@ -9,8 +9,8 @@ export default function Calender() {
     <Card className="bg-white flex flex-col p-4">
       <div className="flex h-1/6">
         <div className="w-1/6" />
-        {data && <div className="flex-1 flex justify-center items-center"><p className="font-bold text-2xl">{`${data[0].start.m}/${data[0].start.d}`}</p></div>}
-        {data && <div className="flex-1 flex justify-center items-center"><p className="font-bold text-2xl">{`${data[data.length - 1].start.m}/${data[data.length - 1].start.d}`}</p></div>}
+        <div className="flex-1 flex justify-center items-center"><p className="font-bold text-2xl">{new Date().toLocaleDateString("ja-JP", { month: "numeric", day: "numeric"})}</p></div>
+        <div className="flex-1 flex justify-center items-center"><p className="font-bold text-2xl">{new Date(Date.now() +  24 * 60 * 60 * 1000).toLocaleDateString("ja-JP", { month: "numeric", day: "numeric"})}</p></div>
       </div>
       <div className="flex-1 flex">
         <div className="flex flex-col w-1/6">
